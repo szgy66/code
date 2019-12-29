@@ -1,13 +1,13 @@
 function img= angular_spectrum( dx, r, obj, z )
-%angular spectrum propagation 
+%angular spectrum propagation by circular convolution
+%dx:pixel size r:wavelength obj:field before propagation; 
+%z:propagation distance; img:field after propagation
 dy = dx;
 du = dx;
 [nn,mm] = size(abs(obj));
 
 dfx = 1/(dx*nn);
 dfy = 1/(dy*mm);
-
-
 
 % % Q operator with dfx, dfy at frequency plane
 pha = zeros(nn,mm);
